@@ -5,6 +5,8 @@ A Inteligência Artificial atua como o sistema de navegação de um foguete, sen
 Durante o trajeto, a IA deve lidar com diferentes tipos de obstáculos:
 
 •	Asteroides: funcionam como barreiras físicas impenetráveis. A rota não pode atravessá-los. 
+
 •	Buracos Negros: representam anomalias gravitacionais. A nave pode atravessá-los, porém com alto custo de energia e tempo, modelado como uma penalidade no custo da transição. 
+
 •	A IA deve decidir estrategicamente entre desviar ou atravessar um buraco negro, considerando o custo total da rota.
 
