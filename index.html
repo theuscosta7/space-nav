@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Nav</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Simulação de Navegação Espacial (Space Nav)</h1>
+
+        <div class="controls">
+            <button onclick="runSimulation('astar', 'strong')" id="btn-astar-strong">A* (Heurística Forte)</button>
+            <button onclick="runSimulation('astar', 'weak')" id="btn-astar-weak">A* (Heurística Fraca)</button>
+            <button onclick="runSimulation('greedy', 'strong')" id="btn-greedy-strong">Gulosa (Heurística
+                Forte)</button>
+            <button onclick="runSimulation('greedy', 'weak')" id="btn-greedy-weak">Gulosa (Heurística Fraca)</button>
+        </div>
+
+        <div class="content">
+            <div class="grid-container">
+                <div id="grid" class="grid"></div>
+            </div>
+
+            <div class="info">
+                <h2>Resultados da Missão</h2>
+                <span id="current-execution" class="current-algo">Aguardando inicialização...</span>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span id="cost" class="stat-value">-</span>
+                        <span class="stat-label">Custo Total</span>
+                    </div>
+                    <div class="stat-box">
+                        <span id="expanded" class="stat-value">-</span>
+                        <span class="stat-label">Nós Expandidos</span>
+                    </div>
+                </div>
+                <div class="processing-time">
+                    Tempo de Processamento: <span id="time">-</span> ms
+                </div>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="cell start"></div> Início (A)
+                    </div>
+                    <div class="legend-item">
+                        <div class="cell end"></div> Destino (B)
+                    </div>
+                    <div class="legend-item">
+                        <div class="cell empty"></div> Espaço Vazio (Custo 1)
+                    </div>
+                    <div class="legend-item">
+                        <div class="cell asteroid"></div> Asteroide (Intransponível)
+                    </div>
+                    <div class="legend-item">
+                        <div class="cell blackhole"></div> Buraco Negro (Custo 10)
+                    </div>
+                    <div class="legend-item">
+                        <div class="cell path"></div> Caminho Final
+                    </div>
+                    <div class="legend-item">
+                        <div class="cell empty explored"></div> Nós Expandidos (Explorados)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
